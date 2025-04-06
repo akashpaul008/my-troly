@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Traveling Products</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      padding: 20px;
+      animation: fadeInBody 1s ease-in both;
+      color: #333;
+    }
+
+    @keyframes fadeInBody {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+      color: #ff6f00;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 35px;
+      color: #555;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .product {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .product h2 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #333;
+    }
+
+    .product-image {
+      width: 100%;
+      height: 220px;
+      object-fit: contain;
+      border-radius: 8px;
+      background-color: #ddd;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      .product-image {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+
+      .product-image {
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Our Traveling Products</h1>
+    <p>Explore our range of traveling products designed to make your journeys more comfortable and secure:</p>
+
+    <div class="products">
+      <div class="product">
+        <h2>TSA Locks</h2>
+        <img src="tsa.png" alt="TSA Locks" class="product-image" />
+      </div>
+      <div class="product">
+        <h2>Eye Masks</h2>
+        <img src="eye.png" alt="Eye Masks" class="product-image" />
+      </div>
+      <div class="product">
+        <h2>Trolley Cover</h2>
+        <img src="cover.png" alt="Trolley Cover" class="product-image" />
+      </div>
+      <div class="product">
+        <h2>Bags Cover</h2>
+        <img src="bagc.png" alt="Bags Cover" class="product-image" />
+      </div>
+      <div class="product">
+        <h2>Neck Pillow</h2>
+        <img src="neck.png" alt="Neck Pillow" class="product-image" />
+      </div>
+      <div class="product">
+        <h2>Sling Bags</h2>
+        <img src="slin.png" alt="Sling Bags" class="product-image" />
+      </div>
+      <div class="product">
+        <h2>Side Bags</h2>
+        <img src="side.png" alt="Side Bags" class="product-image" />
+      </div>
+      <div class="product">
+        <h2>Trucking Bags</h2>
+        <img src="truc.png" alt="Trucking Bags" class="product-image" />
+      </div>
+      <div class="product">
+        <h2>Laptop Bags</h2>
+        <img src="laptop.png" alt="Laptop Bags" class="product-image" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>

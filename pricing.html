@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - My Trolly</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            animation: fadeInBody 1s ease-in both;
+        }
+
+        @keyframes fadeInBody {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #ff6f00; /* Orange header */
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Section for Content */
+        section {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2, h3 {
+            font-size: 28px;
+            color: #ff6f00;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* Product Box Styling with Flexbox */
+        .product-box {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .product-box h3 {
+            color: #ff6f00;
+            margin-bottom: 10px;
+        }
+
+        .product-box p {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the image */
+        .product-box img {
+            width: 150px; /* Square image */
+            height: 150px;
+            object-fit: cover; /* Ensures the image fits within the square */
+            border-radius: 8px;
+        }
+
+        /* Footer Styling */
+        .footer {
+            background-color: #ff6f00; /* Orange footer */
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+                margin: 20px;
+            }
+            h2, h3 {
+                font-size: 24px;
+            }
+            .product-box p {
+                font-size: 16px;
+            }
+            .product-box {
+                flex-direction: column; /* Stack text and image vertically on small screens */
+                align-items: flex-start;
+            }
+            .product-box img {
+                margin-top: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Pricing - My Trolly</h1>
+</header>
+
+<section>
+    <!-- Trolley Combo Section -->
+    <div class="product-box">
+        <div>
+            <h3>Our Trolley Combo (3 Sets) - Starts @ ₹5999</h3>
+            <p>Made of **Polypropylene** material, known for its strength and durability.</p>
+            <p>**Best material for hard trolleys**, offering excellent protection for your belongings.</p>
+            <p>The combo includes **Large, Medium, and Cabin-sized trolleys**, perfect for all travel needs.</p>
+            <p>Ideal for **abroad and regional travels**, adhering to **flight dimension restrictions**.</p>
+            <p>**Durable** with an **international warranty**, ensuring you peace of mind wherever you travel.</p>
+            <p>**Lightweight and sturdy**, making it easy to handle while providing maximum protection for your items.</p>
+            <p>**Modern design** with smooth wheels and reliable handles for a hassle-free travel experience.</p>
+        </div>
+        <img src="p1.png" alt="Trolley Combo Image">
+    </div>
+
+    <!-- Branded Bags Section -->
+    <div class="product-box">
+        <div>
+            <h3>Branded Bags - Starts @ ₹999</h3>
+            <p>Featuring **American Tourister** and **Kamiliant** brands, well-known for their quality and innovation.</p>
+            <p>**International Warranty**, ensuring long-term reliability and customer support.</p>
+            <p>**High durability material** that withstands daily wear and tear, keeping your bag looking new.</p>
+            <p>Comfortable and spacious design, with plenty of compartments for organized packing.</p>
+            <p>**Stylish** and practical for both everyday use and travel needs.</p>
+            <p>**Water-resistant fabric** ensures protection against unpredictable weather conditions.</p>
+        </div>
+        <img src="p2.png" alt="Branded Bags Image">
+    </div>
+
+    <!-- School Bags (Large) Section -->
+    <div class="product-box">
+        <div>
+            <h3>School Bags (Large) - Starts @ ₹699</h3>
+            <p>Made with **high-quality materials** that are durable and lightweight.</p>
+            <p>Offers **one-year warranty**, ensuring a reliable purchase.</p>
+            <p>Ergonomically designed for children with **adjustable straps** to promote comfort and proper posture.</p>
+            <p>Features ample storage with **multiple compartments** to keep books, stationery, and accessories organized.</p>
+            <p>**Stylish designs** with fun patterns and colors that kids will love.</p>
+            <p>**Waterproof fabric** protects the contents from getting damaged during rainy days.</p>
+        </div>
+        <img src="p3.png" alt="School Bags Image">
+    </div>
+
+    <!-- Character Printed Kids School Bags Section -->
+    <div class="product-box">
+        <div>
+            <h3>Character Printed Kids School Bags - Starts @ ₹499</h3>
+            <p>**Fun and vibrant character prints** that appeal to kids of all ages, featuring popular characters and designs.</p>
+            <p>**Lightweight and comfortable**, designed specifically for young children to carry easily.</p>
+            <p>Made with **durable, kid-friendly materials** to ensure long-lasting use.</p>
+            <p>Equipped with **adjustable padded shoulder straps**, making it comfortable to wear for long hours.</p>
+            <p>**Spacious compartments** for carrying books, lunch boxes, and other school essentials.</p>
+            <p>**Affordable and stylish**, the perfect back-to-school solution for your child.</p>
+        </div>
+        <img src="p4.png" alt="Character Printed Bags Image">
+    </div>
+
+    <!-- Laptop Bags (Branded) Section -->
+    <div class="product-box">
+        <div>
+            <h3>Branded Laptop Bags - Starts @ ₹1199</h3>
+            <p>**Premium branded laptop bags**, designed for both professionals and students.</p>
+            <p>**Global warranty**, offering reliable support and quality assurance.</p>
+            <p>Made from **high-durable materials**, ensuring that your laptop stays safe and protected during transit.</p>
+            <p>**Stylish and sleek design**, perfect for carrying your laptop, accessories, and other essentials.</p>
+            <p>Multiple compartments to securely store your **laptop**, chargers, pens, notebooks, and even documents.</p>
+            <p>**Shock-absorbing padding** ensures extra protection for your valuable electronics.</p>
+        </div>
+        <img src="laptop.png" alt="Branded Laptop Bags Image">
+    </div>
+
+    <!-- Laptop Bags Section -->
+    <div class="product-box">
+        <div>
+            <h3>Laptop Bags - Starts @ ₹850</h3>
+            <p>**Affordable yet durable** laptop bags designed for everyday use.</p>
+            <p>Offers **basic warranty**, providing peace of mind with your purchase.</p>
+            <p>Made from **high-quality fabric**, designed to last through daily commuting and use.</p>
+            <p>**Comfortable carrying handles** and **adjustable shoulder straps** for easy portability.</p>
+            <p>Fits most **laptops up to 15.6 inches** and provides extra compartments for accessories.</p>
+            <p>**Lightweight** and easy to carry, making it perfect for students, professionals, or travelers.</p>
+        </div>
+        <img src="p6.png" alt="Laptop Bags Image">
+    </div>
+
+    <!-- Traveling Bags Section -->
+    <div class="product-box">
+        <div>
+            <h3>Traveling Bags - Starts @ ₹1199</h3>
+            <p>**Versatile and spacious traveling bags** suitable for both short trips and long journeys.</p>
+            <p>**Durable and high-quality material** designed to withstand the rigors of travel.</p>
+            <p>Features **multiple compartments** for organized packing, with space for clothes, toiletries, and accessories.</p>
+            <p>**Lightweight** yet sturdy, providing the best combination of comfort and durability.</p>
+            <p>Equipped with **smooth-rolling wheels** for easy maneuvering through airports or stations.</p>
+            <p>**Ideal for both international and regional travel**, offering enough space without being cumbersome.</p>
+        </div>
+        <img src="tb.png" alt="Traveling Bags Image">
+    </div>
+
+</section>
+
+<div class="footer">
+    <p>&copy; 2025 My Trolly. All rights reserved.</p>
+</div>
+
+</body>
+</html>

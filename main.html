@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .product {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px; /* Adjust height to suit your images */
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ddd;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .products {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Our Products</h1>
+        <p>Explore our range of traveling products designed to make your journeys more comfortable and secure:</p>
+
+        <div class="products">
+            <!-- New Products added before TSA Locks -->
+            <div class="product">
+                <h2>Hard Trolley Individual</h2>
+                <img src="m1.png" alt="Hard Trolley Individual" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Hard Trolley Combo</h2>
+                <img src="m2.png" alt="Hard Trolley Combo" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Soft Trolley Individual</h2>
+                <img src="m3.png" alt="Soft Trolley Individual" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Soft Trolley Combo</h2>
+                <img src="soft.png" alt="Soft Trolley Combo" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Duffle Bags</h2>
+                <img src="duff.png" alt="Duffle Bags" class="product-image">
+            </div>
+
+            <!-- Existing Products -->
+            <div class="product">
+                <h2>TSA Locks</h2>
+                <img src="tsa.png" alt="TSA Locks" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Eye Masks</h2>
+                <img src="eye.png" alt="Eye Masks" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Trolley Cover</h2>
+                <img src="cover.png" alt="Trolley Cover" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Bags Cover</h2>
+                <img src="bagc.png" alt="Bags Cover" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Neck Pillow</h2>
+                <img src="neck.png" alt="Neck Pillow" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Sling Bags</h2>
+                <img src="slin.png" alt="Sling Bags" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Side Bags</h2>
+                <img src="sling.png" alt="Side Bags" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Trucking Bags</h2>
+                <img src="truc.png" alt="Trucking Bags" class="product-image">
+            </div>
+
+            <div class="product">
+                <h2>Laptop Bags</h2>
+                <img src="laptop.png" alt="Laptop Bags" class="product-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

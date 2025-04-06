@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MyTrolly</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #FFFAF0;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ... existing styles (no changes) ... */
+    .navbar {
+      background: linear-gradient(90deg, #db600e, #FF8C69);
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    }
+
+    .nav-container {
+      width: 100%;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-brand {
+      color: white;
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-right: auto;
+    }
+
+    .nav-links {
+      margin-left: auto;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: transform 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      transform: scale(1.1);
+      color: white;
+    }
+
+    .hero-section {
+      height: 100vh;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                  url('maine.jpeg');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding-top: 70px;
+    }
+
+    .hero-content {
+      animation: fadeInUp 1s ease;
+    }
+
+    .hero-content h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      background: linear-gradient(90deg, #db600e, #FF8C69);
+      color: white;
+      padding: 15px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.3s ease;
+      display: inline-block;
+    }
+
+    .cta-button:hover {
+      transform: scale(1.1);
+      color: white;
+    }
+
+    .feature-section {
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .section-title {
+      text-align: center;
+      color: #db600e;
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+    }
+
+    .feature-card {
+      margin: 20px;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    .feature-card * {
+      position: relative;
+      z-index: 2;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .feature-card p {
+      margin-bottom: 20px;
+      font-size: 1.1rem;
+    }
+
+    .video-section {
+      padding: 80px 20px;
+      background: #FFFAF0;
+    }
+
+    .video-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      height: 500px;
+    }
+
+    .video-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      animation: zoomIn 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(1);
+      }
+      to {
+        transform: scale(1.1);
+      }
+    }
+
+    .footer {
+      background: linear-gradient(90deg, #db600e, #FF8C69);
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .btn-primary {
+      background-color: #db600e;
+      border-color: #db600e;
+      padding: 10px 25px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #FF6347;
+      border-color: #FF6347;
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .paw-icon {
+      animation: float 3s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 15px;
+      }
+
+      .navbar-brand {
+        font-size: 1.2rem;
+      }
+
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+
+      .feature-card {
+        margin: 10px;
+        min-height: 250px;
+      }
+
+      .video-container {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="#" class="navbar-brand">MyTrolly</a>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <!-- <a href="shop.html">Shop</a> -->
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero-section" id="home">
+    <div class="hero-content">
+      <h1>Welcome to MyTrolly</h1>
+      <p>Find your perfect travelling products here</p>
+      <a href="main.html" class="cta-button">Explore Now</a>
+    </div>
+  </section>
+
+  <section class="feature-section" id="shop">
+    <h2 class="section-title">Our Products</h2>
+    <div class="row mt-4">
+      <div class="col-md-4">
+        <div class="feature-card" style="background: url('ama.jfif') no-repeat center center; background-size: cover;">
+          <h3>Trolly</h3>
+          <p>Explore a variety of trolleys designed for your travel convenience.</p>
+          <a href="trolly.html" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card" style="background: url('img2.jfif') no-repeat center center; background-size: cover;">
+          <h3>Travelling Products</h3>
+          <p>Shop high-quality travel accessories for your next adventure.</p>
+          <a href="travelling.html" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="feature-card" style="background: url('img3.jfif') no-repeat center center; background-size: cover;">
+          <h3>Bags</h3>
+          <p>Discover a range of bags perfect for your travels.</p>
+          <a href="bags.html" class="btn btn-primary">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h2 class="section-title">Ourselfs</h2>
+    <div class="video-container">
+      <img src="kama.jpg" alt="A cute dog" />
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 MyTrolly. All Rights Reserved</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
